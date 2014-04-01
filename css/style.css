@@ -1,0 +1,9 @@
+body {
+  background-color: #7F006E;
+}
+div.central {
+  width: 600px;
+  height: 400px;
+  margin: 100px auto;
+  margin-left: auto;
+}

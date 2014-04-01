@@ -10,6 +10,7 @@
 //Globals
 //No global variables !! Global variables bad, 'k?
 var game;
+
 //Initialisation, this is the main function or the entry point to the programme.
 //This is called from the body tags onload event in the index.html web-page.
 function initGame(){
@@ -24,7 +25,9 @@ function initGame(){
 	//Start the game.
 	game.run();
 	
-}
+};
+// Run the game 
+initGame();
 
 //The Game object, responsible for:
 //		1. The main loop.
@@ -161,7 +164,7 @@ function Levels(game){
 	this.w = game.ctx.canvas.width;		//Background width.
 	this.h = game.ctx.canvas.height;	//Background height.
 	this.levelFrames = [];
-	this.bgImageNames = ["jungle.png", "inca.png", "desert.png", "peru.png"];
+	this.bgImageNames = ["img/jungle.png", "img/inca.png", "img/desert.png", "img/peru.png"];
 	this.levelIndex = 0;
 	this.level = 1;
 	this.leveledUp = false;
@@ -232,13 +235,13 @@ function Sprite(game){
 	this.vy = 0;										//Phat Parrot's vertical velocity in pixels.
 	this.w = 0;											//Phat Parrot's meaty girth.
 	this.h = 0;											//Phat Parrot is a squat litle fellow.
-	this.imageNames = ["p1.png", "p2.png", "p3.png"];	//Phat parrots various guises: p1=wing-down, p2=wing-up, p3=dead.
+	this.imageNames = ["img/p1.png", "img/p2.png", "img/p3.png"];	//Phat parrots various guises: p1=wing-down, p2=wing-up, p3=dead.
 	this.imageFrames = [];								//Array of image objects.
 	this.frameIdx = 0;									//Index into imageFrames, determines which of the three guises to draw next.
 	this.dead = false;									//That sir is a dead parrot!
 	this.immune = false;								//Phat Parrot can fly through solid objects when this is true. Press I key in game.
 	this.started = false;
-	this.audioFiles = ["flap.wav", "squelch.wav", "fail.wav"];
+	this.audioFiles = ["wav/flap.wav", "wav/squelch.wav", "wav/fail.wav"];
 	this.audio = [];
 	
 	var sprite = this;									//Local reference to this Sprite instance.	
@@ -358,8 +361,8 @@ function Gates(game){
 	this.gateArray = [];					//Array of gate objects.
 	this.gateTop = new Image();				//Top gate image object.
 	this.gateBottom  = new Image();			//Bottom gate image object.
-	this.gateTop.src = "gateTop.png";		//Top gate image filename.
-	this.gateBottom.src = "gateBottom.png";	//Bottom gate image filename.
+	this.gateTop.src = "img/gateTop.png";		//Top gate image filename.
+	this.gateBottom.src = "img/gateBottom.png";	//Bottom gate image filename.
 	this.collision = false;					//Flag to indicate if Phat Parrot collided with a gate.
 	this.started = false;
 	var gates = this;
