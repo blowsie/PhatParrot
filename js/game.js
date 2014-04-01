@@ -35,7 +35,7 @@ initGame();
 //		3. Coordinating updates and drawing.
 function Game(context) {
 
-	var INITIAL_SPEED = 120;
+	var INITIAL_SPEED = 33;
 	var game = this;					//Reference to this game instance.
 
 	//Public properties
